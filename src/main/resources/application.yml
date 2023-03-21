@@ -1,0 +1,28 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: pragma-shop
+  datasource:
+    url: jdbc:mysql://localhost:3307/shop_pragma?createDatabaseIfNotExist=true
+    username: root
+    password: shop#123
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+  liquibase:
+    change-log: db/changelog/changelog-master.xml
+
+shop:
+  secret: secreTkjh15H7uJhgSHOP0plFkjtuwerqJm5Oop7wWwlkHQasY
+
+logging:
+  level:
+    com:
+      pragma: debug
+    liquibase: info

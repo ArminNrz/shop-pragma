@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  mysql-service:
+    image: mysql:oracle
+    container_name: mysql-server
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=shop#123

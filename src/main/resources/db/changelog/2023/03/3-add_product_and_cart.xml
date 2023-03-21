@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="1679330804141-1" author="Armin">
+        <createTable tableName="product">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_product"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(720)"/>
+            <column name="available_count" type="INT"/>
+            <column name="price" type="DECIMAL">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1679330815496-1" author="Armin">
+        <createTable tableName="user_cart">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_user_cart"/>
+            </column>
+            <column name="app_user_id" type="BIGINT"/>
+            <column name="product_id" type="BIGINT"/>
+            <column name="order_count" type="INT"/>
+            <column name="active" type="boolean"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="app_user_id" baseTableName="user_cart" constraintName="FK_USER_CART_ON_APP_USER" referencedColumnNames="id" referencedTableName="app_user"/>
+        <addForeignKeyConstraint baseColumnNames="product_id" baseTableName="user_cart" constraintName="FK_USER_CART_ON_PRODUCT" referencedColumnNames="id" referencedTableName="product"/>
+    </changeSet>
+
+    <changeSet id="1679339199880-1" author="Armin">
+        <createIndex tableName="user_cart" indexName="user_product_idx">
+            <column name="app_user_id"/>
+            <column name="product_id"/>
+            <column name="active"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="1679339222958-1" author="Armin">
+        <createIndex tableName="user_cart" indexName="user_idx">
+            <column name="app_user_id"/>
+            <column name="active"/>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>

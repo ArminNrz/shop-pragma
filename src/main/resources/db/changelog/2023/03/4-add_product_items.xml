@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="1679318627347-1" author="Armin">
+        <sql dbms="mysql" splitStatements="true" stripComments="true">
+            insert into product(id, name, description, available_count, price) VALUES (1, 'Radiant', 'Radiant For Men Eau De Toilette Intense 100ml Spray', 10, 5.6);
+            insert into product(id, name, description, available_count, price) VALUES (2, 'David Beckham', 'Intimately Eau De Toilette 30ml Spray', 8, 9.0);
+            insert into product(id, name, description, available_count, price) VALUES (3, 'Calvin Klein', 'Obsession Eau De Toilette 15ml Spray', 7, 9.8);
+            insert into product(id, name, description, available_count, price) VALUES (4, 'The Fragrance Shop', 'Greeting Card For Him', 2, 3.99);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

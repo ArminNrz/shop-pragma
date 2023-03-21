@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="db/changelog/2023/03/1-add_user_role.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/2023/03/2-add_initial_roles.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/2023/03/3-add_product_and_cart.xml" relativeToChangelogFile="false"/>
+    <include file="db/changelog/2023/03/4-add_product_items.xml" relativeToChangelogFile="false"/>
+
+</databaseChangeLog>
