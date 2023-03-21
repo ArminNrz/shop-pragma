@@ -66,4 +66,4 @@ The following guides illustrate how to use some features concretely:
         - By the way you can get product list without any token with this cUrl:
         - `curl --location 'localhost:8085/api/shopping/v1/products?page=0&size=10'`
     - Data base design:
-      - 
+      - [[https://github.com/ArminNrz/shop-pragma/blob/master/DATABASECHANGELOG.png?raw=true|alt=octocat]]
