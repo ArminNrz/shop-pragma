@@ -67,3 +67,5 @@ The following guides illustrate how to use some features concretely:
         - `curl --location 'localhost:8085/api/shopping/v1/products?page=0&size=10'`
     - Data base design:
       - <img src="https://github.com/ArminNrz/shop-pragma/blob/master/DATABASECHANGELOG.png?raw=true)">
+    - The postman file is located in the root of project
+        - [Postman collection](https://github.com/ArminNrz/shop-pragma/blob/master/Pragma.postman_collection.json "Postman collection")
